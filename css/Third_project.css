@@ -958,3 +958,85 @@ img{
     font-size: 20px;
 }
 /* End Our Skills Section */
+/* Start How It works Section */
+.how-it-works{
+    padding: 100px 0;
+    background-color:#ececec;
+}
+.how-it-works .container{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+@media (max-width:776px) {
+    .how-it-works .container{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+.how-it-works .container .image{
+    flex-basis: 55%;
+}
+.how-it-works .container .content{
+    flex-basis: 70%;
+}
+.how-it-works .container .box{
+    background-color: #f6f5f5;
+    display: flex;
+    margin-bottom: 20px;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width:776px) {
+    .how-it-works .container .box{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+.how-it-works .container .box::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ededed ;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.how-it-works .container .box:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.how-it-works .container .box .photo{
+    max-width: 70px;
+}
+.how-it-works .container .box p{
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #777;
+}
+.how-it-works .container .box h2{
+    font-size: 23px;
+    font-weight: 500;
+}
+@media (max-width:776px) {
+    .how-it-works .container .box h2{
+        text-align: center;
+        margin-top: 0;
+    }
+    .how-it-works .container .box p{
+        text-align: center;
+        font-size: 17px;
+    }
+}
+/* End How It works Section */
