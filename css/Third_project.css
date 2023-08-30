@@ -68,7 +68,7 @@ img{
     border: 3px solid black;
     position: relative;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     z-index: 1;
     transition: 0.2s;
@@ -1040,3 +1040,172 @@ img{
     }
 }
 /* End How It works Section */
+/* Start Events Section */
+.events {
+    padding: 100px 0;
+    position: relative; 
+}
+.events .container::after{
+    content: '';
+    position: absolute;
+    background-image: url(../Images/dots.png);
+    top: 100px;
+    right: 0;
+    width: 200px;
+    height: 170px;
+    background-size: cover;
+}
+.events .container::before{
+    content: '';
+    position: absolute;
+    background-image: url(../Images/dots.png);
+    bottom: 70px;
+    left: 0;
+    width: 200px;
+    height: 170px;
+    background-size: cover;
+}
+@media (max-width:776px) {
+    .events .container::after,
+    .events .container::before{
+        display: none;
+    }
+}
+.events .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.events .container .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 50px;
+    width: 100%;
+}
+.events .container .content .image{
+flex-basis: 40%;
+}
+@media (max-width:776px) {
+    .events .container .content .image{ 
+        display: none;
+}
+.events .container .content {
+    justify-content: center;
+}
+}
+.events .container .content .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.events .container .content .text .houres{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.events .container .content .text .houres .count{
+    margin-right: 15px;
+    border: 2px solid #d4d4d4;
+    border-radius: 10px;
+    transition: 0.3s;
+    flex-basis: 20%;
+}
+.events .container .content .text .houres .count p{
+    text-align: center;
+    margin: 0;
+    padding: 20px 10px;
+}
+.events .container .content .text .houres .count p:first-of-type{
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: bold;
+}
+.events .container .content .text .houres .count p:last-of-type{
+    border-top: 2px solid #d4d4d4;
+    transition: 0.3s;
+}
+@media (max-width:776px){
+    .events .container .content .text .houres .count p{
+        padding: 5px 8px;
+    }
+    .events .container .content .text .houres .count{
+        margin-right: 8px;
+    }
+    .events .container .content .text .houres .count p:first-of-type{
+        font-size: 20px;
+    }
+    .events .container .content .text .houres .count p:last-of-type{
+        font-size: 14px;
+    }
+}
+.events .container .content .text .houres .count:hover,
+.events .container .content .text .houres .count:hover p:last-of-type{
+    border-color: var(--main-color);
+}
+.events .container .content .text .speech h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.events .container .content .text .speech p{
+    line-height: 1.6;
+    color: #777;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+.events .container .email{
+    background-color: #f6f5f5;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px 30px;
+    width: 450px ;
+    outline: 15px solid #f6f5f5 ;
+}
+.events .container .email input{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+.events .container .email input:focus{
+    outline: none;
+}
+.events .container .email button{
+    display: block;
+    background-color: var(--main-color);
+    border: none;
+    padding: 18px;
+    color: white;
+    border-radius: 23px;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+@media (max-width:767px){
+    .events .container .email{
+        padding: 10px 10px;
+        width: 290px;
+    }
+    .events .container .email input{
+        padding: 10px;
+    }
+    .events .container .email button{
+        padding: 10px;
+    }
+}
+.events .container .email button:hover{
+    background-color:var(--unmain-color);
+    cursor: pointer;
+}
+/* End Events Section */
